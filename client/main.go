@@ -77,13 +77,13 @@ func callSayHelloClientStreaming(client pb.GreetServiceClient, names *pb.ListNam
 	// M-1
 	log.Printf("%v", res.Messages)
 	log.Println("==========================================")
-
 	// M-2
 	// for _, message := range res.Messages {
 	// 	log.Println(message)
 	// }
 }
 
+// Bidirectional streaming RPC
 func callSayHelloBidirectionalstreaming(client pb.GreetServiceClient, names *pb.ListNames) {
 	log.Println("==========================================")
 	log.Printf("Bidirectional Streaming started")

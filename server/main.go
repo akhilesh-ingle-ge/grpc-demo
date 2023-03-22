@@ -60,6 +60,7 @@ func (s *helloServer) SayHelloClientStreaming(stream pb.GreetService_SayHelloCli
 	}
 }
 
+// Bidirectional streaming RPC
 func (s *helloServer) SayHelloBidirectionalStreaming(stream pb.GreetService_SayHelloBidirectionalStreamingServer) error {
 	for {
 		req, err := stream.Recv()
